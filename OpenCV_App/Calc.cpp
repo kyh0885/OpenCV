@@ -15,17 +15,28 @@ Calc::Calc()
 }
 
 Calc::Calc(int a, int b, char sym)
-	: number1(a)//member inintilizer
+	: number1(a)//member inintilizer-> 생성과 동시에 초기화
 	, number2(b)
 	, symbol(sym)
 	, result(0)
 {
-	cout << "Calc::Ctor2" << endl;
+	cout << "Calc::Ctor2" << endl; //디스플레이하기전에 멤버초기화함
+	this->a = a;
+	this->b = b;
+	this->sym;
+
+	pData = new int[100];
 }
 
 Calc::~Calc()
 {
 	cout << "Calc::Dtor" << endl;
+
+	if (pData != nullptr) 
+	{
+		delete[] pData;
+		pData = nullptr;
+	}
 }
 void Calc::Clear()
 {

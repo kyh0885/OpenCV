@@ -25,10 +25,15 @@ public:
 	int max(const int* const pData, size_t length);
 
 private:
+	int* pData = nullptr;//new를 없애고 smart ptr을 사용하자
+
 	int number1 = 0;
 	int number2 = 0;
 	char symbol;
 	int result;
+	int a;
+	int b;
+	int sym;
 };
 
 

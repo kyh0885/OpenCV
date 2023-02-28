@@ -1,4 +1,7 @@
 #include "Calc.h"
+
+Calc calc_global; // 전역변수..프로그램 시작/종료시  calc 생성,소멸 
+
 int main()
 {
 	if (true)
@@ -35,8 +38,6 @@ int main()
 			pCalc = nullptr;
 		}
 	}
-
-
 
 	{
 		//smart pointer

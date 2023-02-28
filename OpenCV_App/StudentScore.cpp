@@ -6,19 +6,15 @@ Student::Student()
 {
 	cout << "StudentScore::Ctor" << endl;
 }
-
 Student::~Student()
 {
 	cout << "StudentScore::Dtor" << endl;
 }
-
 std::string Student::SetstudentName(string student_name)
 {
 	cout << student_name <<"의 성적은 " << endl;
 	return std::string();
 }
-
-
 std::string Student::Setsubject(string subject, int score, int index)
 {
 	studentinfo.subject[index] = subject;
@@ -27,8 +23,6 @@ std::string Student::Setsubject(string subject, int score, int index)
 	return std::string();
 
 }
-
-
 int Student::DoCalc()
 {	
 	cout << "총합은" << Getsum(studentinfo.scores, eClassSubjectMax) << "입니다" << endl;
@@ -38,7 +32,6 @@ int Student::DoCalc()
 
 	return 0;
 }
-
 //함수
 int Student::Getsum(const int* const pData, int n) {
 	int sum = 0;
@@ -48,12 +41,10 @@ int Student::Getsum(const int* const pData, int n) {
 	}
 	return sum;
 }
-
 float Student::GetAvg(const int* const pData, int n)
 {
 	return Getsum(pData, n) / n;
 }
-
 int Student::GetMin(const int* const pData, int n) {
 	int min = pData[0];
 	for (size_t i = 0; i < n; i++) {
@@ -68,3 +59,13 @@ int Student::GetMax(const int* const pData, int n) {
 	}
 	return max;
 }
+
+
+////C++ expression 
+//std::transform(str.begin(), str.end(), str.begin(), [](uchar c) {return toupper(c); });
+//
+////이름없는 함수 : lambda
+//[](uchar c)
+//{
+//	return toupper(c);
+//}

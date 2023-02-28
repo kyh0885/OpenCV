@@ -48,8 +48,8 @@ int sum(const int* const pData,
 int main()
 {
 	
-	int* pImg = new int[5]{ 1,2,3,4,5 };
-	std::cout << "buffer sum result : " << sum(pImg, 5) << std::endl;
+	//int* pImg = new int[5]{ 1,2,3,4,5 };
+	//std::cout << "buffer sum result : " << sum(pImg, 5) << std::endl;
 	
 	int width = 5;
 	int height = 5;
@@ -63,8 +63,8 @@ int main()
 	};
 
 	int start_index = 6; int finish_index = 13;
-	cout << "image data sum" << sum(pImg,width*height) << endl;
-	cout << "image data sum" << sum(pImg, width * height, start_index, finish_index);
+	cout << "image data sum : " << sum(pImg,width*height) << endl;
+	cout << "image data sum : " << sum(pImg, width * height, start_index, finish_index);
 	//partial ÇÔ¼ö
 	
 
